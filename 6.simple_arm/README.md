@@ -4,7 +4,7 @@
 - Package 만들기 
 ```
 > cd ~/subak_ws/src
-> catkin_create_pkg simple_arm rospy roscpp std_msgs
+> catkin_create_pkg mover rospy roscpp std_msgs
 ```
 - git 에서 package clone하기 
 ```
@@ -14,12 +14,12 @@
 ## move_arm node 만들기
 - [소스참조](https://github.com/Jaeeunykim/ROS_Practice/blob/master/6.simple_arm/main.cpp)
 ```
-> cd ~/subak_ws/src/simple_arm
+> cd ~/subak_ws/src/mover
 > code ./main.cpp
 ```
 - CMakeLists 추가 
 ```
-> cd ~/subak_ws/src/simple_arm
+> cd ~/subak_ws/src/mover
 > code ./CMakeLists.txt 
 add_executable(move_arm main.cpp)
 target_link_libraries(move_arm ${catkin_LIBRARIES})
@@ -40,5 +40,5 @@ target_link_libraries(move_arm ${catkin_LIBRARIES})
 ```
 > cd ~/subak_ws
 > source ./devel/setup.bash
-> rosrun simple_arm move_arm
+> rosrun mover move_arm
 ```
