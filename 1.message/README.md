@@ -32,8 +32,10 @@
 > code ./package.xml
 ```
 - message 생성을 위한 dependency 추가 
+```
 <build_depend>message_generation</build_depend>
 <exec_depend>message_runtime</exec_depend>
+```
 
 
 ## CMakeLists.txt 수정
@@ -55,6 +57,11 @@ catkin_package(
 add_message_files(
   FILES
   Info.msg
+)
+
+generate_messages(
+  DEPENDENCIES
+  std_msgs
 )
   ``` 
 
