@@ -8,6 +8,7 @@
 > catkin_init_workspace
 > cd ~/subak_ws
 > catkin_make
+> source ~/subak_ws/devel/setup.bash
 ```
 - message package 만들기
 ```
