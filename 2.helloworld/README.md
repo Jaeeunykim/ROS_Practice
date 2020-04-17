@@ -12,7 +12,7 @@
 ```
 - helloworld package 만들기
 ```
-> cd ~/subak/src
+> cd ~/subak_ws/src
 > catkin_create_pkg helloworld rospy roscpp std_msgs
 ```
 
