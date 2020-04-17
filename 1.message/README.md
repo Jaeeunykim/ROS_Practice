@@ -20,23 +20,27 @@
 ## msg 파일 생성
 ```
 > cd ~/subak_ws/src/message
+> mkdir msg
+> cd ~/subak_ws/src/message/msg
 > code ./Info.msg
 ```
 
 ## package.xml 수정
+```
 > cd ~/subak_ws/src/message
 > code ./package.xml
-- message 생성을 위한 dependency 추가 
 ```
+- message 생성을 위한 dependency 추가 
 <build_depend>message_generation</build_depend>
 <exec_depend>message_runtime</exec_depend>
-  ```
+
 
   ## CMakeLists.txt 수정
+ 
+  ``` 
   > cd ~/subak_ws/src/message
   > code ./CMakeLists.txt
-  - 
-  ```
+ 
   find_package(catkin REQUIRED COMPONENTS
    ...
    message_generation //추가
