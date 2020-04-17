@@ -35,31 +35,26 @@
 <exec_depend>message_runtime</exec_depend>
 
 
-  ## CMakeLists.txt 수정
+## CMakeLists.txt 수정
  
   ``` 
   > cd ~/subak_ws/src/message
   > code ./CMakeLists.txt
- 
+  ``` 
   find_package(catkin REQUIRED COMPONENTS
    ...
    message_generation //추가
    )
-```
 
-```
 catkin_package(
   ...
   CATKIN_DEPENDS message_runtime ... //추가
   )
-  ```
 
-```
 add_message_files(
   FILES
   Info.msg
 )
-```
 
 ## message 빌드하기
 ```
@@ -70,7 +65,6 @@ add_message_files(
 ## message 확인
 ```
 > rosmsg show Info
-or 
 > rosmsg info Info
 ```
 ![](./result_image.png)
