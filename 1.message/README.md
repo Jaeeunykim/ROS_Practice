@@ -40,7 +40,7 @@
   ``` 
   > cd ~/subak_ws/src/message
   > code ./CMakeLists.txt
-  ``` 
+ 
   find_package(catkin REQUIRED COMPONENTS
    ...
    message_generation //추가
@@ -55,6 +55,7 @@ add_message_files(
   FILES
   Info.msg
 )
+  ``` 
 
 ## message 빌드하기
 ```
