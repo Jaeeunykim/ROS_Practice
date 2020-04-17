@@ -11,7 +11,7 @@
 ```
 - message package 만들기
 ```
-> cd ~/subak/src
+> cd ~/subak_ws/src
 > catkin_create_pkg message rospy roscpp std_msgs
 ```
 
@@ -19,11 +19,13 @@
 
 ## msg 파일 생성
 ```
-> cd ~/subak/message
+> cd ~/subak_ws/src/message
 > code ./Info.msg
 ```
 
 ## package.xml 수정
+> cd ~/subak_ws/src/message
+> code ./package.xml
 - message 생성을 위한 dependency 추가 
 ```
 <build_depend>message_generation</build_depend>
@@ -31,6 +33,8 @@
   ```
 
   ## CMakeLists.txt 수정
+  > cd ~/subak_ws/src/message
+  > code ./CMakeLists.txt
   - 
   ```
   find_package(catkin REQUIRED COMPONENTS
@@ -43,7 +47,7 @@
 catkin_package(
   ...
   CATKIN_DEPENDS message_runtime ... //추가
-  ...)
+  )
   ```
 
 ```
@@ -55,7 +59,7 @@ add_message_files(
 
 ## message 빌드하기
 ```
-> cd ~/subak
+> cd ~/subak_ws
 > catkin_make install
 ```
 
